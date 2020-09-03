@@ -27,159 +27,113 @@ $blue: #4facff;
     text-align: center;
     box-shadow: -1px 15px 30px -12px black;
     z-index: 9999;
-}
 
-.clash-card__image {
-    position: relative;
-    height: 230px;
-    margin-bottom: 35px;
-    border-top-left-radius: $border-radius-size;
-    border-top-right-radius: $border-radius-size;
-
-    img {
-        position: absolute;
-        top: -15%;
-        left: -15%;
-        height: 130%;
-        object-fit: scale-down;
-    }
-}
-
-.clash-card__level {
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 700;
-    margin-bottom: 3px;
-}
-
-.clash-card__level.yellow {
-    color: $yellow;
-}
-
-.clash-card__level.pink {
-    color: $pink;
-}
-
-.clash-card__level.orange {
-    color: $orange;
-}
-
-.clash-card__level.green {
-    color: $green;
-}
-
-.clash-card__level.blue {
-    color: $blue;
-}
-
-.clash-card__name {
-    font-size: 26px;
-    color: black;
-    font-weight: 900;
-    margin-bottom: 5px;
-}
-
-.clash-card__description {
-    color: #777;
-    padding: 20px;
-    margin-bottom: 10px;
-}
-
-.clash-card__stats.yellow {
-    background: $yellow;
-
-    .one-third {
-        border-right: 1px solid #bd7c2f;
-    }
-}
-
-.clash-card__stats.pink {
-    background: $pink;
-
-    .one-third {
-        border-right: 1px solid #d04976;
-    }
-}
-
-.clash-card__stats.orange {
-    background: $orange;
-
-    .one-third {
-        border-right: 1px solid darken($orange, 8%);
-    }
-}
-
-.clash-card__stats.green {
-    background: $green;
-
-    .one-third {
-        border-right: 1px solid darken($green, 6%);
-    }
-}
-
-.clash-card__stats.blue {
-    background: $blue;
-
-    .one-third {
-        border-right: 1px solid darken($blue, 6%);
-    }
-}
-
-.clash-card__stats {
-    color: white;
-    font-weight: 700;
-    border-bottom-left-radius: $border-radius-size;
-    border-bottom-right-radius: $border-radius-size;
-
-    .one-third {
-        width: 33%;
-        float: left;
-        padding: 20px 15px;
+    .clash-card__image {
+        position: relative;
+        height: 230px;
+        margin-bottom: 35px;
+        border-top-left-radius: $border-radius-size;
+        border-top-right-radius: $border-radius-size;
     
-        &:last-child {
-            border-right: none !important;
+        img {
+            position: absolute;
+            top: -15%;
+            left: -15%;
+            height: 130%;
+            object-fit: scale-down;
         }
     }
+    
+    .clash-card__level {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 700;
+        margin-bottom: 3px;
 
-    sup {
-        position: absolute;
-        bottom: 4px;
-        font-size: 45%;
-        margin-left: 2px;
+        &.yellow { color: $yellow; }
+        
+        &.pink { color: $pink; }
+        
+        &.orange { color: $orange; }
+        
+        &.green { color: $green; }
+        
+        &.blue { color: $blue; }
     }
-
-    .stat {
-        position: relative;
-        font-size: 24px;
+    
+    .clash-card__name {
+        font-size: 26px;
+        color: black;
+        font-weight: 900;
+        margin-bottom: 5px;
+    }
+    
+    .clash-card__description {
+        color: #777;
+        padding: 20px;
         margin-bottom: 10px;
     }
+    
+    .clash-card__stats {
+        display: flex;
+        color: white;
+        font-weight: 700;
+        border-bottom-left-radius: $border-radius-size;
+        border-bottom-right-radius: $border-radius-size;
 
-    .stat-value {
-        text-transform: uppercase;
-        font-weight: 400;
-        font-size: 12px;
+        &:after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+
+        &.yellow {
+            background: $yellow;
+            .stat { border-right: 1px solid #bd7c2f; }
+        }
+        
+        &.pink {
+            background: $pink;
+            .stat { border-right: 1px solid #d04976; }
+        }
+        
+        &.orange {
+            background: $orange;
+            .stat { border-right: 1px solid darken($orange, 8%); }
+        }
+        
+        &.green {
+            background: $green;
+            .stat { border-right: 1px solid darken($green, 6%); }
+        }
+        
+        &.blue {
+            background: $blue;
+            .stat { border-right: 1px solid darken($blue, 6%); }
+        }
+    
+        .stat {
+            width: 100%;
+            padding: 20px 15px;
+        
+            &:last-child {
+                border-right: none !important;
+            }
+        }
+    
+        .stat-name {
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 12px;
+        }
+
+        .stat-value {
+            position: relative;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
     }
-
-    .no-border {
-        border-right: none !important;
-    }
-}
-
-.clearfix:after {
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0;
-}
-
-.slick-prev {
-    left: 100px;
-    z-index: 999;
-}
-
-.slick-next {
-    right: 100px;
-    z-index: 999;
 }

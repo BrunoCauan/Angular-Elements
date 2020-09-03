@@ -11,10 +11,10 @@
         {{ description }}
     </div>
 
-    <div class="clash-card__stats clearfix" [ngClass]="color">
-        <div *ngFor="let card of cardStats" class="one-third">
-            <div class="stat">{{ card.value }}</div>
-            <div class="stat-value">{{ card.name }}</div>
+    <div class="clash-card__stats" [ngClass]="color">
+        <div *ngFor="let card of cardStats" class="stat">
+            <div class="stat-value">{{ card.value }}</div>
+            <div class="stat-name">{{ card.name }}</div>
         </div>
     </div>
 </div>
