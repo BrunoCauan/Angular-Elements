@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 type Color = 'yellow' | 'pink' | 'orange' | 'green' | 'blue';
 
@@ -11,6 +11,7 @@ interface Stat {
     selector: 'game-card',
     templateUrl: './game-card.component.html',
     styleUrls: ['./game-card.component.scss'],
+    encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class GameCardComponent {
     @Input() level: number;
