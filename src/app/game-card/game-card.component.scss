@@ -1,0 +1,185 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+
+$border-radius-size: 14px;
+
+$yellow: #ec9b3b;
+$pink: #ee5487;
+$orange: #f6901a;
+$green: #82bb30;
+$blue: #4facff;
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.clash-card {
+    background: white;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    border-radius: $border-radius-size + 5;
+    position: relative;
+    text-align: center;
+    box-shadow: -1px 15px 30px -12px black;
+    z-index: 9999;
+}
+
+.clash-card__image {
+    position: relative;
+    height: 230px;
+    margin-bottom: 35px;
+    border-top-left-radius: $border-radius-size;
+    border-top-right-radius: $border-radius-size;
+
+    img {
+        position: absolute;
+        top: -15%;
+        left: -15%;
+        height: 130%;
+        object-fit: scale-down;
+    }
+}
+
+.clash-card__level {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.clash-card__level.yellow {
+    color: $yellow;
+}
+
+.clash-card__level.pink {
+    color: $pink;
+}
+
+.clash-card__level.orange {
+    color: $orange;
+}
+
+.clash-card__level.green {
+    color: $green;
+}
+
+.clash-card__level.blue {
+    color: $blue;
+}
+
+.clash-card__name {
+    font-size: 26px;
+    color: black;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.clash-card__description {
+    color: #777;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.clash-card__stats.yellow {
+    background: $yellow;
+
+    .one-third {
+        border-right: 1px solid #bd7c2f;
+    }
+}
+
+.clash-card__stats.pink {
+    background: $pink;
+
+    .one-third {
+        border-right: 1px solid #d04976;
+    }
+}
+
+.clash-card__stats.orange {
+    background: $orange;
+
+    .one-third {
+        border-right: 1px solid darken($orange, 8%);
+    }
+}
+
+.clash-card__stats.green {
+    background: $green;
+
+    .one-third {
+        border-right: 1px solid darken($green, 6%);
+    }
+}
+
+.clash-card__stats.blue {
+    background: $blue;
+
+    .one-third {
+        border-right: 1px solid darken($blue, 6%);
+    }
+}
+
+.clash-card__stats {
+    color: white;
+    font-weight: 700;
+    border-bottom-left-radius: $border-radius-size;
+    border-bottom-right-radius: $border-radius-size;
+
+    .one-third {
+        width: 33%;
+        float: left;
+        padding: 20px 15px;
+    
+        &:last-child {
+            border-right: none !important;
+        }
+    }
+
+    sup {
+        position: absolute;
+        bottom: 4px;
+        font-size: 45%;
+        margin-left: 2px;
+    }
+
+    .stat {
+        position: relative;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .stat-value {
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    .no-border {
+        border-right: none !important;
+    }
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.slick-prev {
+    left: 100px;
+    z-index: 999;
+}
+
+.slick-next {
+    right: 100px;
+    z-index: 999;
+}

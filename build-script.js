@@ -2,7 +2,7 @@ const fs = require('fs-extra');
 const concat = require('concat');
 
 (async function build() {
-    const AngularElementName = 'card-element';
+    const AngularElementName = 'game-card';
     
     const files = [
         './dist/angular-elements/runtime-es2015.js',
